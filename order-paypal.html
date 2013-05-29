@@ -1,0 +1,124 @@
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Payment Gateway</title>
+<base href="http://clientzone.rumahweb.com/">
+<script type="text/javascript" src="includes/jscript/jquery.js"></script>
+<link href="templates/default/css/bootstrap.css" rel="stylesheet">
+<link href="templates/default/css/whmcs.css" rel="stylesheet">
+<script src="templates/default/js/whmcs.js"></script>
+<script type="text/javascript" src="templates/default/js/domainiddns.js"></script>
+</head>
+<body>
+<div id="whmcsheader">
+	<div class="whmcscontainer">
+		<div id="whmcstxtlogo"><a href="index.php">Rumahweb Indonesia</a></div>
+		<div id="whmcsimglogo"><a href="index.php"><img src="templates/default/img/whmcslogo.png" alt="Rumahweb Indonesia"></a></div>
+	</div>
+</div>
+<!-- /navbar -->
+<div class="whmcscontainer">
+	<div class="contentpadded">
+		<div class="hero-unit">
+			<h1>Terima kasih telah Menggunakan Layanan Rumahweb</h1>
+			<p>Anda memilih untuk melakukan pembayaran melalui [Paypal / iPaymu], untuk itu silahkan klik tombol dibawah ini untuk membayar invoice Anda</p>
+			<div align="right">
+				<button href="#" class="btn btn-large btn-success"><strong>Bayar Sekarang</strong> &raquo;</button>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="span6">
+				<div class="alert alert-info">
+					<h3>Note untuk Order Baru :</h3><br/>
+					<p>Karena pembayaran Anda melalui Payment Gateway ([Paypal/iPaymu]), domain Anda akan langsung aktif beberapa saat sesudah proses pembayaran selesai (khusus untuk gTLD &amp; .ID auto-provisioning) .<br/>Untuk itu silahkan perhatikan beberapa hal berikut ini:</p>
+					<ul>
+						<li>Khusus untuk order baru, jika ternyata terjadi kesalahan dalam pembayaran maka domain yang sudah diaktifkan tidak dapat di refund</li>
+						<li>Untuk order hosting, layanan akan diaktifkan dalam waktu 5 - 60 menit setelah proses pembayaran selesai. Jika pembayaran dilakukan pada hari Minggu / libur di atas pukul 17.00WIB, layanan hosting akan diaktifkan pada jam kerja (08.00WIB)</li>
+						
+					</ul>
+				</div>
+				<div class="alert alert-success">
+					<h3>Jangan lupa konfirmasi</h3><br/>
+					<p>
+					Segera lakukan konfirmasi setelah Anda melakukan pembayaran. Konfirmasi dapat dilakukan melalui :
+					</p>
+					<p>
+					<ul>
+						<li>
+							<strong>Halaman Konfirmasi</strong><br/>
+							Klik <a href="#">disini</a> untuk melakukan konfirmasi melalui Halaman Konfirmasi<br/>&nbsp;
+						</li>
+						<li>
+							<strong>SMS</strong><br/>
+							Kirimkan SMS ke nommor 0811111111 dengan format berikut :<br/>
+							<strong>BAYAR</strong>&lt;spasi&gt;<strong>INV</strong>&lt;spasi&gt;<strong>#12131231</strong>&lt;spasi&gt;<strong>35000</strong>&lt;spasi&gt;<strong>BCA</strong><br/>
+							<em>*Mohon konfirmasi SMS dilakukan di hari yang sama</em>
+						</li>
+					</ul>
+					</p>
+					<h4 style="border-bottom:thin solid #92c07e;">Catatan</h4>
+					<p>
+						<ol>
+							<li>
+								Pembayaran yang tidak dikonfirmasikan <strong>tidak akan diproses</strong>
+							</li>
+							<li>
+								Konfirmasi yang dilakukan diluar 2 metode di atas (misal: melalui email, chat, atau telepon) akan menyebabkan 
+							</li>
+							<li>
+								Kami akan memproses pembayaran Anda dalam waktu 10 - 60 menit setelah konfirmasi dilakukan
+							</li>
+							<li>
+								Pembayaran yang dilakukan antara pukul 21.00 - 08.00 akan diproses mulai pukul 08.00 hari berikutnya
+							</li>
+						</ol>
+					</p>
+				</div>
+			</div>
+			<div class="span6">
+				<div class="well">
+					<h2 style="border-bottom:thin solid #525252;">Petunjuk Pembayaran</h2>
+					<br/>
+					<h3>Invoice #1241232</h3>
+					Total : Rp. 35.000,-
+					<hr>
+					<h3>Berita</h3>
+					INV 124523<br/><br/>
+					<small><em>*Ketikkan berita di atas pada saat Anda melakukan pembayaran melalui ATM Non-Tunai, setoran Bank, atau Internet Banking</em></small>
+					<hr>
+					<h4>Data Bank</h4>
+					Bank Mandiri Cabang Yogyakarta<br/>
+					No. Rekening : 037-0000000000<br/>
+					a/n Yusuf Nurrachman
+					<div class="offset3"><button class="btn" href="http://ipg.satusite.net/bank">Lihat Detail Invoice</button></div>
+				</div>
+				<h3>Anda memiliki Pertanyaan?</h3>
+				<p>
+					Silahkan hubungi customer service kami melalui :
+					<ul>
+						<li><strong>Email:</strong> info@rumahweb.com / billing@rumahweb.com</li>
+						<li><strong>Phone:</strong> 0274-882257 / 7442344 / 021-25556765</li>
+						<li><strong>Livechat</strong>
+					</ul>
+				</p>
+			</div>
+		</div>
+		<p align="center">
+			<form style="text-align:center" method="post" action="http://ipg.satusite.net/bank/downinstruction">
+				<input type="hidden" name="instruction" value="">
+				<button class="btn btn-large" href="http://ipg.satusite.net/bank">Download Instruksi Pembayaran</button>
+				<button class="btn btn-large" href="http://ipg.satusite.net/bank">Cetak</button>
+			</form>
+		</p>
+	</div>
+</div>
+<div class="footerdivider">
+	<div class="fill"></div>
+</div>
+<div class="whmcscontainer">
+    <div class="footer">
+		<div id="copyright"> © 2013 Rumahweb Indonesia. .</div>
+		<div class="clear"></div>
+    </div>
+</div>
+</body>
+</html> 
