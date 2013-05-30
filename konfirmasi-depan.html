@@ -1,6 +1,6 @@
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<title>Payment Gateway</title>
+<title>Konfirmasi Pembayaran</title>
 <base href="http://clientzone.rumahweb.com/">
 <script type="text/javascript" src="includes/jscript/jquery.js"></script>
 <link href="templates/default/css/bootstrap.css" rel="stylesheet">
@@ -18,23 +18,24 @@
 <!-- /navbar -->
 <div class="whmcscontainer">
 	<div class="contentpadded">
-		<div class="hero-unit">
-			<h1>Terima kasih telah Menggunakan Layanan Rumahweb</h1>
-			<p>Anda memilih untuk melakukan pembayaran melalui [Paypal / iPaymu], untuk itu silahkan klik tombol dibawah ini untuk membayar invoice Anda</p>
-			<div align="right">
-				<button href="#" class="btn btn-large btn-success"><strong>Bayar via [Paypal]</strong> &raquo;</button>
-			</div>
+		<h1 style="border-bottom:thin solid #525252;">Form Konfirmasi Pembayaran</h1>
+		<p>&nbsp;</p>
+		<div class="alert alert-info">
+			<strong>Petunjuk:</strong><br/>
+			Untuk dapat melanjutkan mengisi form konfirmasi pembayaran, silahkan masukkan kode huruf dibawah ini untuk keamanan.
 		</div>
+		<form class="form-horizontal">
+		  <div class="control-group">
+		    <label class="control-label" for="inputEmail">Email</label>
+		    <div class="controls">
+		      <input type="text" id="inputEmail" placeholder="Email" class="input-medium">
+		    </div>
+		  </div>
+		</form>
 		<div class="row-fluid">
 			<div class="span6">
-				<div class="alert alert-info">
-					<h3>Note untuk Order Baru :</h3><br/>
-					<p>Karena pembayaran Anda melalui Payment Gateway ([Paypal/iPaymu]), domain Anda akan langsung aktif beberapa saat sesudah proses pembayaran selesai (khusus untuk gTLD &amp; .ID auto-provisioning) .<br/>Untuk itu silahkan perhatikan beberapa hal berikut ini:</p>
-					<ul>
-						<li>Khusus untuk order baru, jika ternyata terjadi kesalahan dalam pembayaran maka domain yang sudah diaktifkan tidak dapat di refund<br/>&nbsp;</li>
-						<li>Untuk order hosting, layanan akan diaktifkan dalam waktu 5 - 60 menit setelah proses pembayaran selesai. Jika pembayaran dilakukan pada hari Minggu / libur di atas pukul 17.00WIB, layanan hosting akan diaktifkan pada jam kerja (08.00WIB)<br/>&nbsp;</li>
-						<li>Paypal secara otomatis akan merubah jumlah pembayaran ke dalam USD, selisih kurs menjadi tanggungan pelanggan</li>
-					</ul>
+				<div class="well">
+					
 				</div>
 			</div>
 			<div class="span6">
