@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>Konfirmasi Pembayaran</title>
@@ -7,6 +8,7 @@
 <link href="templates/default/css/whmcs.css" rel="stylesheet">
 <script src="templates/default/js/whmcs.js"></script>
 <script type="text/javascript" src="templates/default/js/domainiddns.js"></script>
+<script type="text/javascript" src="tooltip.js"></script>
 </head>
 <body>
 <div id="whmcsheader">
@@ -18,62 +20,88 @@
 <!-- /navbar -->
 <div class="whmcscontainer">
 	<div class="contentpadded">
-		<h1 style="border-bottom:thin solid #525252;">Form Konfirmasi Pembayaran</h1>
+		<h1 style="border-bottom:thin solid #525252;">Konfirmasi Pembayaran</h1>
 		<p>&nbsp;</p>
-		<div class="alert alert-info">
-			<strong>Petunjuk:</strong><br/>
-			Untuk dapat melanjutkan mengisi form konfirmasi pembayaran, silahkan masukkan kode huruf dibawah ini untuk keamanan.
-		</div>
-		<form class="form-horizontal">
-		  <div class="control-group">
-		    <label class="control-label" for="inputEmail">Email</label>
-		    <div class="controls">
-		      <input type="text" id="inputEmail" placeholder="Email" class="input-medium">
-		    </div>
-		  </div>
-		</form>
-		<div class="row-fluid">
-			<div class="span6">
-				<div class="well">
-					
+		<!-- captcha -->
+		<div align="center">
+			<form>
+				<div class="control-group">
+					<div class="controls">
+						<img src="http://placehold.it/100x50"><br/>
+						<a href="#"><i class="icon-refresh"></i> Klik untuk refresh kode diatas</a>
+					</div>
+				</div>		
+				<div class="control-group">
+					<div class="controls">
+						<input type="text" id="inputEmail" placeholder="Masukkan kode di atas .." class="input-medium" style="height:30px;font-size:16px;">
+					</div>
+					<div class="controls">
+						<button class="btn btn-primary">Submit</button>
+					</div>
 				</div>
-			</div>
-			<div class="span6">
-				<div class="well">
-					<h2 style="border-bottom:thin solid #525252;">Invoice</h2>
-					<br/>
-					<h3>Invoice #1241232</h3>
-					Total : Rp. 35.000,-
-					<hr>
-					<h3>Berita</h3>
-					INV 124523<br/><br/>
-					<small><em>*Ketikkan berita di atas pada saat Anda melakukan pembayaran melalui ATM Non-Tunai, setoran Bank, atau Internet Banking</em></small>
-					<hr>
-					<h4>Data Bank</h4>
-					Bank Mandiri Cabang Yogyakarta<br/>
-					No. Rekening : 037-0000000000<br/>
-					a/n Yusuf Nurrachman
-					<div class="offset3"><button class="btn" href="http://ipg.satusite.net/bank">Lihat Detail Invoice</button></div>
-				</div>
-				<h3>Anda memiliki Pertanyaan?</h3>
-				<p>
-					Silahkan hubungi customer service kami melalui :
-					<ul>
-						<li><strong>Email:</strong> info@rumahweb.com / billing@rumahweb.com</li>
-						<li><strong>Phone:</strong> 0274-882257 / 7442344 / 021-25556765</li>
-						<li><strong>Livechat</strong>
-					</ul>
-				</p>
-			</div>
-		</div>
-		<p align="center">
-			<form style="text-align:center" method="post" action="http://ipg.satusite.net/bank/downinstruction">
-				<input type="hidden" name="instruction" value="">
-				<button class="btn btn-large" href="http://ipg.satusite.net/bank">Download Instruksi Pembayaran</button>
-				<button class="btn btn-large" href="http://ipg.satusite.net/bank">Cetak</button>
-				<button class="btn btn-large btn-success" href="http://ipg.satusite.net/bank">Bayar via [Paypal]</button>
 			</form>
-		</p>
+		</div>
+		<!-- captcha end-->
+		<!-- form -->
+		<div class="alert alert-info">
+			<strong>Penting!</strong> Mohon konfirmasi ini hanya dilakukan <strong>setelah</strong> Anda melakukan pembayaran.<br/>
+			Isi data dengan benar untuk memudahkan kami memverifikasi konfirmasi Anda.
+		</div>
+		<form class="form-horizontal">	
+			<div class="row-fluid">
+				<div class="span6">
+					<div class="well">
+						<h3 style="border-bottom:thin solid #ededed;margin:0 0 15px 0;">Data Order</h3>
+						<div class="control-group">
+							<label class="control-label">Jenis Tagihan</label>
+							<div class="controls">
+								<select>
+									<option>Order Baru / Perpanjangan</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Nomor Invoice</label>
+							<div class="controls">
+								<div class="input-append">
+									<input type="text" placeholder="Masukkan nomor invoice"><button rel="tooltip" href="#" class="btn btn-primary btn-small" data-toggle="tooltip" data-placement="top" data-title="Klik disini untuk multiple invoice"><i class="icon-plus icon-white"></i></button>
+									<span class="help-block">Klik tanda "+" jika lebih dari satu invoice</span>
+								</div>
+							</div>
+						</div>
+						<h3 style="border-bottom:thin solid #ededed;margin:0 0 15px 0;">Data Pembayaran</h3>						
+					</div>
+				</div>
+				<div class="span6">
+					<div class="well">
+						<h3 style="border-bottom:thin solid #ededed;margin:0 0 15px 0;">Data Pelanggan</h3>
+						<div class="control-group">
+							<label class="control-label">Email Pelanggan</label>
+							<div class="controls">
+								<div class="input-append">
+									<input type="text" placeholder="Masukkan email Anda"><button rel="tooltip" href="#" class="btn btn-primary btn-small" data-toggle="tooltip" data-placement="top" data-title="Klik disini untuk multiple invoice"><i class="icon-plus icon-white"></i></button>
+									<span class="help-block">Klik "+" untuk menambahkan email lain</span>
+								</div>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Nomor Telepon</label>
+							<div class="controls">
+								<div class="input-append">
+									<input type="text" placeholder="Masukkan nomor invoice"><button rel="tooltip" href="#" class="btn btn-primary btn-small" data-toggle="tooltip" data-placement="top" data-title="Klik disini untuk multiple invoice"><i class="icon-plus icon-white"></i></button>
+									<span class="help-block">Klik "+" untuk menambahkan nomor lain</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="well" align="center">
+				<button class="btn btn-large btn-primary" href="http://ipg.satusite.net/bank">Submit</button>
+				<button class="btn btn-large" href="http://ipg.satusite.net/bank">Reset</button>
+			</div>
+		</form>
+		<!-- form End-->
 	</div>
 </div>
 <div class="footerdivider">
